@@ -6,7 +6,7 @@ if [ $# -ge 1 ] ; then
   export KUBECONFIG=$1
 fi
 
-NS=inji-certify
+NS=inji-certify-incra
 CHART_VERSION=0.0.1-develop
 
 helm repo add mosip https://mosip.github.io/mosip-helm
@@ -30,7 +30,7 @@ while true; do
         kubectl -n $NS delete secret db-common-secrets
 
         echo Initializing DB
-        helm -n $NS install postgres-init-certify mosip/postgres-init -f init_values.yaml \
+        helm -n $NS install postgres-init-certify-incra mosip/postgres-init -f init_values.yaml \
         --version $CHART_VERSION \
         --set dbUserPasswords.dbuserPassword="$DB_USER_PASSWORD" \
         --wait --wait-for-jobs

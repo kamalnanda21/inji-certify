@@ -2,9 +2,9 @@
 #  dbuserPassword: ""
 
 databases:
-  inji_certify:
+  inji_certify_incra:
     enabled: true
-    host: "postgres-postgresql.postgres"
+    host: "inji-postgres-rds.c9w0c8mus9uc.ap-south-1.rds.amazonaws.com"
     port: 5432
     su:
       user: postgres
@@ -12,6 +12,5 @@ databases:
         name: postgres-postgresql
         key: postgres-password
     dml: 1
-    repoUrl: https://github.com/mosip/inji-certify.git
-    branch: develop
-
+    repoUrl: "https://github.com/kamalnanda21/inji-certify.git"
+    branch: db-scripts-kamal
