@@ -1,7 +1,7 @@
 
 ## Properties file
 set -e
-properties_file="$1"
+properties_file="deploy.properties"
 echo `date "+%m/%d/%Y %H:%M:%S"` ": $properties_file"
 if [ -f "$properties_file" ]
 then
